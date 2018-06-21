@@ -35,30 +35,30 @@ parameter while building the image).
 To make the two images clearly distinct, it is recommended to build them
 with explicit names, e.g.
 
-  docker build -t mfrunner-prod prod
+    docker build -t mfrunner-prod prod
 
 and
 
-  docker build -t mfrunner-debug debug
+    docker build -t mfrunner-debug debug
 
 
 ## Examples
 
 ### Start a production-ready container
 
-  docker run \
-  -v /my/host/input/dir:/in:ro \
-  -v /my/host/output/dir:/out \
-  -v /my/morph/dir:/mfwf:ro \
-  -v /my/plugins/dir:/app/plugins:ro \
-  mfrunner-prod \
-  /my/flux/dir \
-  flux_var1=value1 flux_var2=value2
+    docker run \
+    -v /my/host/input/dir:/in:ro \
+    -v /my/host/output/dir:/out \
+    -v /my/morph/dir:/mfwf:ro \
+    -v /my/plugins/dir:/app/plugins:ro \
+    mfrunner-prod \
+    /my/flux/dir \
+    flux_var1=value1 flux_var2=value2
 
 ### Start a container for a debugging session
 
-  docker run \
-  -v /my/host/input/dir:/in:ro \
-  -p 50505:50505 \
-  mfrunner-prod \
-  /my/flux/dir
+    docker run \
+    -v /my/host/input/dir:/in:ro \
+    -p 50505:50505 \
+    mfrunner-prod \
+    /my/flux/dir
