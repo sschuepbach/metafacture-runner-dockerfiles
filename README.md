@@ -8,6 +8,15 @@
 
 s. https://github.com/metafacture/metafacture-core
 
+## Versions
+
+- [Metafacture runner 5.0.0](https://github.com/sschuepbach/metafacture-runner-dockerfiles/tree/5.0.0)
+- [Metafacture runner 4.0.0](https://github.com/sschuepbach/metafacture-runner-dockerfiles/tree/4.0.0)
+- [Metafacture runner 3.1.1](https://github.com/sschuepbach/metafacture-runner-dockerfiles/tree/3.1.1)
+- [Metafacture runner 3.1.0](https://github.com/sschuepbach/metafacture-runner-dockerfiles/tree/3.1.0)
+- [Metafacture runner 3.0.0](https://github.com/sschuepbach/metafacture-runner-dockerfiles/tree/3.0.0)
+- [Metafacture runner 2.0.0](https://github.com/sschuepbach/metafacture-runner-dockerfiles/tree/2.0.0)
+
 ## Usage
 
 This repository provides two Dockerfiles to run standalone instances of
@@ -35,30 +44,30 @@ parameter while building the image).
 To make the two images clearly distinct, it is recommended to build them
 with explicit names, e.g.
 
-  docker build -t mfrunner-prod prod
+    docker build -t mfrunner-prod prod
 
 and
 
-  docker build -t mfrunner-debug debug
+    docker build -t mfrunner-debug debug
 
 
 ## Examples
 
 ### Start a production-ready container
 
-  docker run \
-  -v /my/host/input/dir:/in:ro \
-  -v /my/host/output/dir:/out \
-  -v /my/morph/dir:/mfwf:ro \
-  -v /my/plugins/dir:/app/plugins:ro \
-  mfrunner-prod \
-  /my/flux/dir \
-  flux_var1=value1 flux_var2=value2
+    docker run \
+    -v /my/host/input/dir:/in:ro \
+    -v /my/host/output/dir:/out \
+    -v /my/morph/dir:/mfwf:ro \
+    -v /my/plugins/dir:/app/plugins:ro \
+    mfrunner-prod \
+    /my/flux/dir \
+    flux_var1=value1 flux_var2=value2
 
 ### Start a container for a debugging session
 
-  docker run \
-  -v /my/host/input/dir:/in:ro \
-  -p 50505:50505 \
-  mfrunner-prod \
-  /my/flux/dir
+    docker run \
+    -v /my/host/input/dir:/in:ro \
+    -p 50505:50505 \
+    mfrunner-prod \
+    /my/flux/dir
