@@ -1,5 +1,7 @@
 FROM zenika/alpine-maven:latest
 
+LABEL mfrunner-version=5.0.0
+
 RUN mkdir /mfwf /in /out
 
 RUN apk add --update curl bash \
