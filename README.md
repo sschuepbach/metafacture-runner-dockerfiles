@@ -1,4 +1,4 @@
-# Dockerfiles for Metafacture Runner
+# Dockerfiles for Metafacture Runner 3.0.0
 
 ## About
 
